@@ -6,9 +6,92 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 50px;
+  background-color:#FAFAFA;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+width: 355px;
+height: 36px;
+left: 131px;
+top: 122px;
+font-family: 'Epilogue';
+font-style:normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 29px;
+color: #444955;
+margin-bottom: 40px;
+}
+
+.container-form {
+/* border: red solid 1px; */
+font-family: 'Verdana';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+color: #3D495C;
+width: 360px;
+padding: 0%;
+}
+
+.container-form .nome label {
+  height: 24px;
+width: 355px;
+}
+
+.container-form .nome input {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+border-radius: 0px;
+width: 355px;
+height: 37px;
+left: 133px;
+top: 265px;
+background: #FFFFFF;
+margin-bottom: 10px;
+}
+
+.container-form .area label {
+height: 24px;
+width: 88px;
+left: 0px;
+top: 0px;
+border-radius: nullpx;
+
+}
+
+.container-form .area .textarea {
+background: #FFFFFF;
+height: 80px;
+width: 355px;
+left: 0px;
+top: 0px;
+border-radius: 0px;
+margin-bottom: 20px;
+
+}
+
+.container-form .attr label {
+  margin-left: 30px;
+}
+
+.container-form .attr input {
+box-sizing: border-box;
+margin-left: 5px;
+margin-bottom: 10px;
+width: 278px;
+height: 37px;
+left: 213px;
+top: 466px;
+background: #FFFFFF;
+border: 1px solid #29313D;
+border-radius: 2px;
 }

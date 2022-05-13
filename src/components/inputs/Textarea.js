@@ -5,15 +5,17 @@ class Textarea extends React.Component {
   render() {
     const { nome, atr, value, onChange } = this.props;
     return (
-      <div>
+      <div className="area">
         <label htmlFor={ nome }>
-          { nome }
-          <textarea
-            value={ value }
-            onChange={ onChange }
-            data-testid={ `${atr}-input` }
-          />
+          {nome}
         </label>
+        <br />
+        <textarea
+          className="textarea"
+          value={ value }
+          onChange={ onChange }
+          data-testid={ `${atr}-input` }
+        />
       </div>
     );
   }

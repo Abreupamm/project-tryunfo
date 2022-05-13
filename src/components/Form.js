@@ -23,8 +23,9 @@ class Form extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="container-form">
         <Input
+          classe="nome"
           value={ cardName }
           onChange={ onInputChange }
           nome="Nome"
@@ -32,12 +33,14 @@ class Form extends React.Component {
           atr="name"
         />
         <Textarea
+          classe="area"
           value={ cardDescription }
           onChange={ onInputChange }
           nome="Descrição"
           atr="description"
         />
         <Input
+          classe="attr"
           value={ cardAttr1 }
           onChange={ onInputChange }
           nome="Attr01"
@@ -45,6 +48,7 @@ class Form extends React.Component {
           atr="attr1"
         />
         <Input
+          classe="attr"
           value={ cardAttr2 }
           onChange={ onInputChange }
           nome="Attr02"
@@ -52,6 +56,7 @@ class Form extends React.Component {
           atr="attr2"
         />
         <Input
+          classe="attr"
           value={ cardAttr3 }
           onChange={ onInputChange }
           nome="Attr03"
