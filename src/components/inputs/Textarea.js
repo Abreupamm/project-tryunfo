@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 class Textarea extends React.Component {
   render() {
-    const { nome, atr } = this.props;
+    const { nome, atr, value, onChange } = this.props;
     return (
       <div>
         <label htmlFor={ nome }>
           { nome }
-          <textarea data-testid={ `${atr}-input` } />
+          <textarea value={ value } onChange={ onChange } data-testid={ `${atr}-input` } />
         </label>
       </div>
     );

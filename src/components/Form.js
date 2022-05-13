@@ -29,7 +29,7 @@ class Form extends React.Component {
     return (
       <div>
         <Input value={ cardName } onChange={ onInputChange } nome="Nome" tipo="text" atr="name" />
-        <Textarea nome="Descrição" atr="description" />
+        <Textarea value={ cardDescription } onChange={ onInputChange } nome="Descrição" atr="description" />
         <Input nome="Attr01" tipo="number" atr="attr1" />
         <Input nome="Attr02" tipo="number" atr="attr2" />
         <Input nome="Attr03" tipo="number" atr="attr3" />
