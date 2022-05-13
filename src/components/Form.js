@@ -31,8 +31,8 @@ class Form extends React.Component {
         <Input value={ cardName } onChange={ onInputChange } nome="Nome" tipo="text" atr="name" />
         <Textarea value={ cardDescription } onChange={ onInputChange } nome="Descrição" atr="description" />
         <Input value={ cardAttr1 } onChange={ onInputChange } nome="Attr01" tipo="number" atr="attr1" />
-        <Input nome="Attr02" tipo="number" atr="attr2" />
-        <Input nome="Attr03" tipo="number" atr="attr3" />
+        <Input value={ cardAttr2 } onChange={ onInputChange } nome="Attr02" tipo="number" atr="attr2" />
+        <Input value={ cardAttr3 } onChange={ onInputChange } nome="Attr03" tipo="number" atr="attr3" />
         <Input nome="Imagem" tipo="text" atr="image" />
         {/* <InputSelect nome="Raridade" atr="rare" options={this.optionsSelect} /> */}
         <Checkbox nome="Super Trybe Trunfo" atr="trunfo" />
