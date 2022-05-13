@@ -36,7 +36,7 @@ class Form extends React.Component {
         <Input value={ cardImage } onChange={ onInputChange } nome="Imagem" tipo="text" atr="image" />
         <InputSelect value={ cardRare } onChange={ onInputChange } nome="Raridade" atr="rare" options={this.optionsSelect} />
         <Checkbox checked={ cardTrunfo } onChange={ onInputChange } nome="Super Trybe Trunfo" atr="trunfo" />
-        <Button nome="Salvar" atr="save-button" />
+        <Button disabled={ isSaveButtonDisabled } onClick={ onSaveButtonClick } nome="Salvar" atr="save-button" />
       </div>
     );
   }
