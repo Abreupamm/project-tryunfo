@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 class Card extends React.Component {
   render() {
-  const { cardName, cardImage } = this.props;
+  const { cardName, cardImage, cardDescription } = this.props;
     return (
       <div>
         <p data-testid="name-card">{cardName}</p>
-        <img data-testid="image-card" src={ cardImage } alt={ cardName } />
+        <img data-testid="image-card" src={cardImage} alt={cardName} />
+        <p data-testid="description-card">{ cardDescription }</p>
       </div>
     );
   }
