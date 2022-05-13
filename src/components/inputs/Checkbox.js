@@ -6,8 +6,13 @@ class Checkbox extends React.Component {
     const { nome, atr, checked, onChange } = this.props;
     return (
       <label htmlFor={ nome }>
-        <input checked={ checked } onChange={ onChange } type="checkbox" data-testid={ `${atr}-input` } />
-        {nome}
+        <input
+          checked={ checked }
+          onChange={ onChange }
+          type="checkbox"
+          data-testid={ `${atr}-input` }
+        />
+        { nome }
       </label>
     );
   }

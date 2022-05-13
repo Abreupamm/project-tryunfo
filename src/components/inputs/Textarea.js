@@ -8,7 +8,11 @@ class Textarea extends React.Component {
       <div>
         <label htmlFor={ nome }>
           { nome }
-          <textarea value={ value } onChange={ onChange } data-testid={ `${atr}-input` } />
+          <textarea
+            value={ value }
+            onChange={ onChange }
+            data-testid={ `${atr}-input` }
+          />
         </label>
       </div>
     );
@@ -18,6 +22,8 @@ class Textarea extends React.Component {
 Textarea.propTypes = {
   nome: PropTypes.string.isRequired,
   atr: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Textarea;

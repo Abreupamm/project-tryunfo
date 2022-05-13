@@ -6,7 +6,14 @@ class Button extends React.Component {
     const { nome, atr, disabled, onClick } = this.props;
     return (
       <div>
-        <button disabled={ disabled } onClick={ onClick } type="submit" data-testid={ atr }>{ nome }</button>
+        <button
+          disabled={ disabled }
+          onClick={ onClick }
+          type="submit"
+          data-testid={ atr }
+        >
+          {nome}
+        </button>
       </div>
     );
   }
