@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 50px;
+  margin-left: 50px;
   background-color:#FAFAFA;
 }
 
@@ -27,6 +27,13 @@ line-height: 29px;
 color: #444955;
 margin-bottom: 40px;
 }
+.form {
+  /* border: orange solid 1px; */
+  width: 50%;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
 
 .container-form {
 /* border: red solid 1px; */
@@ -36,7 +43,7 @@ font-weight: 700;
 font-size: 16px;
 line-height: 150%;
 color: #3D495C;
-width: 360px;
+/* width: 50%; */
 padding: 0%;
 }
 
@@ -45,13 +52,13 @@ padding: 0%;
 width: 355px;
 }
 
-.container-form .nome input {
+.container-form .nome input, .rare select {
   display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
 border-radius: 0px;
-width: 355px;
+width: 98%;
 height: 37px;
 left: 133px;
 top: 265px;
@@ -59,19 +66,10 @@ background: #FFFFFF;
 margin-bottom: 10px;
 }
 
-.container-form .area label {
-height: 24px;
-width: 88px;
-left: 0px;
-top: 0px;
-border-radius: nullpx;
-
-}
-
-.container-form .area .textarea {
+.container-form .textarea {
 background: #FFFFFF;
 height: 80px;
-width: 355px;
+width: 98%;
 left: 0px;
 top: 0px;
 border-radius: 0px;
@@ -80,18 +78,71 @@ margin-bottom: 20px;
 }
 
 .container-form .attr label {
-  margin-left: 30px;
+  width: 20%;
+
 }
 
 .container-form .attr input {
 box-sizing: border-box;
-margin-left: 5px;
-margin-bottom: 10px;
-width: 278px;
+margin-left: 20px;
+margin-bottom: 15px;
+width: 83%;
 height: 37px;
-left: 213px;
-top: 466px;
 background: #FFFFFF;
 border: 1px solid #29313D;
 border-radius: 2px;
+}
+
+.image input {
+  box-sizing: border-box;
+margin-left: 28px;
+margin-bottom: 15px;
+width: 78%;
+height: 37px;
+background: #FFFFFF;
+border: 1px solid #29313D;
+border-radius: 2px;
+}
+
+.button {
+  margin-top: 20px;
+  width: 90px;
+  height: 35px;
+  background-color: #003BE5;
+  color: #FFFFFF;
+}
+
+.container-form-visual {
+  display: flex;
+  margin: 0%;
+  height: 762px;
+/* border: blueviolet solid 1px; */
+}
+.container-visual {
+  background-color:#023031;
+  width: 50%;
+  margin-top: 0px;
+}
+
+.container-visual h2 {
+  color: #FFFFFF;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.container-visual .dv1 {
+  background-color: #FFFFFF;
+margin-top: 50px;
+  height: 68%;
+width: 65%;
+margin-left: 20%;
+border-radius: 10px;
+padding: 2%;
+}
+
+.container-visual .dv2 {
+  background-color: #036B52;
+  height: 100%;
+border: #003BE5 solid 3px;
+border-radius: 10px;
 }

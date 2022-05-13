@@ -25,6 +25,7 @@ class Form extends React.Component {
     return (
       <div className="container-form">
         <Input
+          name="cardName"
           classe="nome"
           value={ cardName }
           onChange={ onInputChange }
@@ -33,7 +34,8 @@ class Form extends React.Component {
           atr="name"
         />
         <Textarea
-          classe="area"
+          name="cardDescription"
+          classe="nome"
           value={ cardDescription }
           onChange={ onInputChange }
           nome="Descrição"
@@ -64,6 +66,8 @@ class Form extends React.Component {
           atr="attr3"
         />
         <Input
+          name="cardImage"
+          classe="image"
           value={ cardImage }
           onChange={ onInputChange }
           nome="Imagem"
@@ -71,6 +75,7 @@ class Form extends React.Component {
           atr="image"
         />
         <InputSelect
+          classe="rare"
           value={ cardRare }
           onChange={ onInputChange }
           nome="Raridade"
@@ -83,6 +88,7 @@ class Form extends React.Component {
           atr="trunfo"
         />
         <Button
+          classe="button"
           disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
           nome="Salvar"

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 class InputSelect extends React.Component {
   render() {
-    const { nome, atr, value, onChange } = this.props;
+    const { nome, atr, value, onChange, classe } = this.props;
     return (
-      <div>
+      <div  className={ classe }>
         <label htmlFor={ nome }>{ nome }</label>
         <select value={ value } onChange={ onChange } data-testid={ `${atr}-input` }>
           <option>normal</option>
@@ -22,6 +22,7 @@ InputSelect.propTypes = {
   atr: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  classe: PropTypes.string.isRequired,
 };
 
 export default InputSelect;

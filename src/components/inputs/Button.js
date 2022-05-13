@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 class Button extends React.Component {
   render() {
-    const { nome, atr, disabled, onClick } = this.props;
+    const { nome, atr, disabled, onClick, classe } = this.props;
     return (
       <div>
         <button
+          className={ classe }
           disabled={ disabled }
           onClick={ onClick }
           type="submit"
@@ -24,6 +25,7 @@ Button.propTypes = {
   atr: PropTypes.string.isRequired,
   disabled: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
+  classe: PropTypes.string.isRequired,
 };
 
 export default Button;
