@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Checkbox extends React.Component {
   render() {
-    const { nome, atr } = this.props;
+    const { nome, atr, } = this.props;
     return (
       <label htmlFor={ nome }>
         <input type="checkbox" data-testid={ `${atr}-input` } />

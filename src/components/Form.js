@@ -34,7 +34,7 @@ class Form extends React.Component {
         <Input value={ cardAttr2 } onChange={ onInputChange } nome="Attr02" tipo="number" atr="attr2" />
         <Input value={ cardAttr3 } onChange={ onInputChange } nome="Attr03" tipo="number" atr="attr3" />
         <Input value={ cardImage } onChange={ onInputChange } nome="Imagem" tipo="text" atr="image" />
-        {/* <InputSelect nome="Raridade" atr="rare" options={this.optionsSelect} /> */}
+        <InputSelect checked={ cardRare } onChange={ onInputChange } nome="Raridade" atr="rare" options={this.optionsSelect} />
         <Checkbox nome="Super Trybe Trunfo" atr="trunfo" />
         <Button nome="Salvar" atr="save-button" />
       </div>
