@@ -31,6 +31,7 @@ class App extends React.Component {
       cardAttr2,
       cardAttr3,
       cardRare,
+      cardTrunfo,
       onInputChange
     } = this.state;
     console.log();
@@ -46,6 +47,7 @@ class App extends React.Component {
             cardAttr2={cardAttr2}
             cardAttr3={cardAttr3}
             cardRare={cardRare}
+            cardTrunfo={cardTrunfo}
             onInputChange={onInputChange} />
         </div>
         <Card
@@ -55,6 +57,7 @@ class App extends React.Component {
           cardAttr2={cardAttr2}
           cardAttr3={cardAttr3}
           cardRare={cardRare}
+          cardTrunfo={cardTrunfo}
           cardDescription={cardDescription}
         />
       </div>

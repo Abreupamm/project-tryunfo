@@ -86,6 +86,7 @@ class Form extends React.Component {
           atr="rare"
         />
         <Checkbox
+          name="cardTrunfo"
           checked={ cardTrunfo }
           onChange={ onInputChange }
           nome="Super Trybe Trunfo"
