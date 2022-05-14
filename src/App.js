@@ -15,10 +15,26 @@ class App extends React.Component {
     // hasTrunfo,
     onInputChange: (event) => {
       const { value, name } = event.target;
-      this.setState({ [name]: value });
+      this.setState({ [name]: value }, () => {
+        this.state.isSaveButtonDisabled
+      },);
     },
-    // isSaveButtonDisabled,
-    // onSaveButtonClick,
+    isSaveButtonDisabled: () => {
+      const {
+        cardName,
+        cardDescription,
+        cardImage,
+        cardRare,
+      } = this.state;
+      if (cardName === '' || cardDescription === '' || cardImage === '' || cardRare === '') {
+        return true
+      } else {
+      return false
+      }
+    },
+    onSaveButtonClick: () => {
+      console.log('click');
+    }
   }
 
   render() {
@@ -32,6 +48,8 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       onInputChange,
+      isSaveButtonDisabled,
+      onSaveButtonClick,
     } = this.state;
     return (
       <div className="container-form-visual">
@@ -47,6 +65,8 @@ class App extends React.Component {
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
             onInputChange={ onInputChange }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            onSaveButtonClick= { onSaveButtonClick }
           />
         </div>
         <Card
