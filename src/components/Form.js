@@ -78,6 +78,7 @@ class Form extends React.Component {
           atr="image"
         />
         <InputSelect
+          name="cardRare"
           classe="rare"
           value={ cardRare }
           onChange={ onInputChange }
