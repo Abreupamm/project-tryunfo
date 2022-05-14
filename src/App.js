@@ -12,6 +12,7 @@ class App extends React.Component {
     cardImage: '',
     cardRare: '',
     cardTrunfo: false,
+    salvaCards: [],
     // hasTrunfo,
     onInputChange: (event) => {
       const { value, name } = event.target;
@@ -28,6 +29,35 @@ class App extends React.Component {
       return validation;
     },
     onSaveButtonClick: () => {
+      const {
+        salvaCards,
+        cardName,
+        cardImage,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        cardRare,
+        cardDescription,
+      } = this.state;
+      const cards = {
+        nome: cardName,
+        descricao: cardDescription,
+        attr1: cardAttr1,
+        attr2: cardAttr2,
+        atts3: cardAttr3,
+        imagem: cardImage,
+        raridade: cardRare,
+      };
+      salvaCards.push(cards);
+      this.setState({
+        cardName: '',
+        cardImage: '',
+        cardAttr1: 0,
+        cardAttr2: 0,
+        cardAttr3: 0,
+        cardRare: '',
+        cardDescription: '',
+      });
       console.log('click');
     },
   }
