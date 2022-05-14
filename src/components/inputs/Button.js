@@ -8,7 +8,7 @@ class Button extends React.Component {
       <div>
         <button
           className={ classe }
-          disabled={ disabled() }
+          disabled={ disabled }
           onClick={ onClick }
           type="button"
           data-testid={ atr }
