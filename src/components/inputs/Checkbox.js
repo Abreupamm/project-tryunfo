@@ -7,7 +7,7 @@ class Checkbox extends React.Component {
     return (
       <label htmlFor={ nome }>
         <input
-          name={name}
+          name={ name }
           checked={ checked }
           onChange={ onChange }
           type="checkbox"

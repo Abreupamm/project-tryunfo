@@ -11,7 +11,7 @@ class Textarea extends React.Component {
         </label>
         <br />
         <textarea
-          name={name}
+          name={ name }
           className="textarea"
           value={ value }
           onChange={ onChange }

@@ -5,13 +5,14 @@ class InputSelect extends React.Component {
   render() {
     const { nome, atr, value, onChange, classe, name } = this.props;
     return (
-      <div  className={ classe }>
+      <div className={ classe }>
         <label htmlFor={ nome }>{ nome }</label>
         <select
-          name={name}
-          value={value}
-          onChange={onChange}
-          data-testid={`${atr}-input`}>
+          name={ name }
+          value={ value }
+          onChange={ onChange }
+          data-testid={ `${atr}-input` }
+        >
           <option>normal</option>
           <option>raro</option>
           <option>muito raro</option>

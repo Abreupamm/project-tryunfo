@@ -13,7 +13,7 @@ class Button extends React.Component {
           type="submit"
           data-testid={ atr }
         >
-          {nome}
+          { nome }
         </button>
       </div>
     );

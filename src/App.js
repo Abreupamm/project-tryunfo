@@ -3,25 +3,24 @@ import Form from './components/Form';
 import Card from './components/Card';
 
 class App extends React.Component {
-  handleonInputChange = (event) => {
-         const { value, name } = event.target;
-         this.setState({ [name]: value});
-}
   state = {
     cardName: '',
-      cardDescription: '',
-      cardAttr1: '',
-      cardAttr2: '',
-      cardAttr3: '',
-      cardImage: '',
-      cardRare: '',
-      cardTrunfo: false,
-      // hasTrunfo,
-       onInputChange: this.handleonInputChange,
-      // isSaveButtonDisabled,
-      // onSaveButtonClick,
+    cardDescription: '',
+    cardAttr1: '',
+    cardAttr2: '',
+    cardAttr3: '',
+    cardImage: '',
+    cardRare: '',
+    cardTrunfo: false,
+    // hasTrunfo,
+    onInputChange: (event) => {
+      const { value, name } = event.target;
+      this.setState({ [name]: value });
+    },
+    // isSaveButtonDisabled,
+    // onSaveButtonClick,
   }
-  
+
   render() {
     const {
       cardName,
@@ -32,33 +31,33 @@ class App extends React.Component {
       cardAttr3,
       cardRare,
       cardTrunfo,
-      onInputChange
+      onInputChange,
     } = this.state;
-    console.log();
     return (
-      <div className="container-form-visual"  >
-        <div className="form" >
-        <h1>Adicionar nova Carta</h1>
+      <div className="container-form-visual">
+        <div className="form">
+          <h1>Adicionar nova Carta</h1>
           <Form
-            cardName={cardName}
-            cardDescription={cardDescription}
-            cardImage={cardImage}
-            cardAttr1={cardAttr1}
-            cardAttr2={cardAttr2}
-            cardAttr3={cardAttr3}
-            cardRare={cardRare}
-            cardTrunfo={cardTrunfo}
-            onInputChange={onInputChange} />
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardImage={ cardImage }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            onInputChange={ onInputChange }
+          />
         </div>
         <Card
-          cardName={cardName}
-          cardImage={cardImage}
-          cardAttr1={cardAttr1}
-          cardAttr2={cardAttr2}
-          cardAttr3={cardAttr3}
-          cardRare={cardRare}
-          cardTrunfo={cardTrunfo}
-          cardDescription={cardDescription}
+          cardName={ cardName }
+          cardImage={ cardImage }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
+          cardDescription={ cardDescription }
         />
       </div>
     );
