@@ -20,7 +20,16 @@ class App extends React.Component {
       },);
     },
     isSaveButtonDisabled: () => {
-      const {
+      const validation = [this.handleValidationInput(), this. handleValidationAttr()].some((item) => item!=false);
+      return validation;
+    },
+    onSaveButtonClick: () => {
+      console.log('click');
+    }
+  }
+
+  handleValidationInput = () => {
+     const {
         cardName,
         cardDescription,
         cardImage,
@@ -28,9 +37,17 @@ class App extends React.Component {
       } = this.state;
      const validation = [cardName, cardDescription, cardImage, cardRare].some((item) => !item.length);
       return validation;
-    },
-    onSaveButtonClick: () => {
-      console.log('click');
+  }
+
+  handleValidationAttr = () => {
+    const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
+    const valores = [parseInt(cardAttr1), parseInt(cardAttr2), parseInt(cardAttr3)];
+    const maxValor = valores.every((valor) => valor < 91 && valor > -1);
+    const soma = valores.reduce((soma, valor) => soma + valor);
+    if (maxValor === true && soma <= 210) {
+      return false
+    } else {
+    return true
     }
   }
 
