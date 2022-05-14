@@ -23,7 +23,15 @@ class App extends React.Component {
   }
   
   render() {
-    const { cardName, cardDescription, cardImage, onInputChange } = this.state;
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      onInputChange
+    } = this.state;
     console.log();
     return (
       <div className="container-form-visual"  >
@@ -33,11 +41,17 @@ class App extends React.Component {
             cardName={cardName}
             cardDescription={cardDescription}
             cardImage={cardImage}
+            cardAttr1={cardAttr1}
+            cardAttr2={cardAttr2}
+            cardAttr3={cardAttr3}
             onInputChange={onInputChange} />
         </div>
         <Card
           cardName={cardName}
           cardImage={cardImage}
+          cardAttr1={cardAttr1}
+          cardAttr2={cardAttr2}
+          cardAttr3={cardAttr3}
           cardDescription={cardDescription}
         />
       </div>
