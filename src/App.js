@@ -26,11 +26,8 @@ class App extends React.Component {
         cardImage,
         cardRare,
       } = this.state;
-      if (cardName === '' || cardDescription === '' || cardImage === '' || cardRare === '') {
-        return true
-      } else {
-      return false
-      }
+     const validation = [cardName, cardDescription, cardImage, cardRare].some((item) => !item.length);
+      return validation;
     },
     onSaveButtonClick: () => {
       console.log('click');
