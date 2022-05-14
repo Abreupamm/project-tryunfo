@@ -16,39 +16,54 @@ class App extends React.Component {
     onInputChange: (event) => {
       const { value, name } = event.target;
       this.setState({ [name]: value }, () => {
-        this.state.isSaveButtonDisabled
-      },);
+        const { isSaveButtonDisabled } = this.state;
+        isSaveButtonDisabled();
+      });
     },
     isSaveButtonDisabled: () => {
-      const validation = [this.handleValidationInput(), this. handleValidationAttr()].some((item) => item!=false);
+      const validation = [
+        this.handleValidationInput(),
+        this.handleValidationAttr(),
+      ].some((item) => item !== false);
       return validation;
     },
     onSaveButtonClick: () => {
       console.log('click');
-    }
+    },
   }
 
   handleValidationInput = () => {
-     const {
-        cardName,
-        cardDescription,
-        cardImage,
-        cardRare,
-      } = this.state;
-     const validation = [cardName, cardDescription, cardImage, cardRare].some((item) => !item.length);
-      return validation;
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+    } = this.state;
+    const validation = [
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+    ].some((item) => !item.length);
+    return validation;
   }
 
   handleValidationAttr = () => {
     const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
-    const valores = [parseInt(cardAttr1), parseInt(cardAttr2), parseInt(cardAttr3)];
-    const maxValor = valores.every((valor) => valor < 91 && valor > -1);
-    const soma = valores.reduce((soma, valor) => soma + valor);
-    if (maxValor === true && soma <= 210) {
-      return false
-    } else {
-    return true
-    }
+    const valores = [
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+    ].map((attr) => Number(attr));
+    const numberMax = 91;
+    const NumberMin = -1;
+    const numberSoma = 210;
+    const maxVl = valores.every((valor) => valor < numberMax && valor > NumberMin);
+    const soma = valores.reduce((acc, valor) => acc + valor);
+    const no = false;
+    const yes = true;
+    const result = maxVl === true && soma <= numberSoma ? no : yes;
+    return result;
   }
 
   render() {
@@ -80,7 +95,7 @@ class App extends React.Component {
             cardTrunfo={ cardTrunfo }
             onInputChange={ onInputChange }
             isSaveButtonDisabled={ isSaveButtonDisabled }
-            onSaveButtonClick= { onSaveButtonClick }
+            onSaveButtonClick={ onSaveButtonClick }
           />
         </div>
         <Card
