@@ -72,7 +72,6 @@ class App extends React.Component {
       cardAttr3: '0',
       cardRare: '',
       cardDescription: '',
-      click: true,
     });
     console.log('click');
   }
@@ -148,18 +147,18 @@ class App extends React.Component {
         </div>
         <div className="container-visual">
           <h2>Pré-visualização</h2>
-        <Card
-          cardName={ cardName }
-          cardImage={ cardImage }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          cardDescription={ cardDescription }
-        />
+          <Card
+            cardName={ cardName }
+            cardImage={ cardImage }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            cardDescription={ cardDescription }
+          />
         </div>
-        <CardList salvaCards={salvaCards} />
+        <CardList salvaCards={ salvaCards } />
       </div>
     );
   }

@@ -15,22 +15,22 @@ class Card extends React.Component {
     } = this.props;
 
     return (
-        <div className="dv1">
-          <div className="dv2">
-            <div className="card-nome" data-testid="name-card">{cardName}</div>
-            <div className="card-image">
-              <img data-testid="image-card" src={ cardImage } alt={ cardName } />
-            </div>
-            <div className="card-description">
-              <p data-testid="description-card">{ cardDescription }</p>
-            </div>
-            <div>
-              <p data-testid="attr1-card">{ cardAttr1 }</p>
-              <p data-testid="attr2-card">{ cardAttr2 }</p>
-              <p data-testid="attr3-card">{ cardAttr3 }</p>
-              <p data-testid="rare-card">{ cardRare }</p>
-            </div>
+      <div className="dv1">
+        <div className="dv2">
+          <div className="card-nome" data-testid="name-card">{cardName}</div>
+          <div className="card-image">
+            <img data-testid="image-card" src={ cardImage } alt={ cardName } />
           </div>
+          <div className="card-description">
+            <p data-testid="description-card">{ cardDescription }</p>
+          </div>
+          <div>
+            <p data-testid="attr1-card">{ cardAttr1 }</p>
+            <p data-testid="attr2-card">{ cardAttr2 }</p>
+            <p data-testid="attr3-card">{ cardAttr3 }</p>
+            <p data-testid="rare-card">{ cardRare }</p>
+          </div>
+        </div>
         <div>
           { cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p> }
         </div>
