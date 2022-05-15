@@ -72,6 +72,7 @@ class App extends React.Component {
       cardAttr3: '0',
       cardRare: '',
       cardDescription: '',
+      cardTrunfo: undefined,
     });
     console.log('click');
   }
@@ -127,36 +128,38 @@ class App extends React.Component {
       onSaveButtonClick,
     } = this.state;
     return (
-      <div className="container-form-visual">
-        <div className="form">
-          <h1>Adicionar nova Carta</h1>
-          <Form
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardImage={ cardImage }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-            onInputChange={ onInputChange }
-            isSaveButtonDisabled={ isSaveButtonDisabled() }
-            onSaveButtonClick={ onSaveButtonClick }
-            hasTrunfo={ hasTrunfo }
-          />
-        </div>
-        <div className="container-visual">
-          <h2>Pré-visualização</h2>
-          <Card
-            cardName={ cardName }
-            cardImage={ cardImage }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-            cardDescription={ cardDescription }
-          />
+      <div>
+        <div className="container-form-visual">
+          <div className="form">
+            <h1>Adicionar nova Carta</h1>
+            <Form
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardImage={ cardImage }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+              onInputChange={ onInputChange }
+              isSaveButtonDisabled={ isSaveButtonDisabled() }
+              onSaveButtonClick={ onSaveButtonClick }
+              hasTrunfo={ hasTrunfo }
+            />
+          </div>
+          <div className="container-visual">
+            <h2>Pré-visualização</h2>
+            <Card
+              cardName={ cardName }
+              cardImage={ cardImage }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+              cardDescription={ cardDescription }
+            />
+          </div>
         </div>
         <CardList salvaCards={ salvaCards } />
       </div>
