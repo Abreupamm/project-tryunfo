@@ -13,7 +13,7 @@ class App extends React.Component {
     cardRare: '',
     cardTrunfo: false,
     salvaCards: [],
-    // hasTrunfo,
+    hasTrunfo: false,
     onInputChange: (event) => {
       const { value, name } = event.target;
       this.setState({ [name]: value }, () => {
@@ -29,37 +29,50 @@ class App extends React.Component {
       return validation;
     },
     onSaveButtonClick: () => {
-      const {
-        salvaCards,
-        cardName,
-        cardImage,
-        cardAttr1,
-        cardAttr2,
-        cardAttr3,
-        cardRare,
-        cardDescription,
-      } = this.state;
-      const cards = {
-        nome: cardName,
-        descricao: cardDescription,
-        attr1: cardAttr1,
-        attr2: cardAttr2,
-        atts3: cardAttr3,
-        imagem: cardImage,
-        raridade: cardRare,
-      };
-      salvaCards.push(cards);
-      this.setState({
-        cardName: '',
-        cardImage: '',
-        cardAttr1: 0,
-        cardAttr2: 0,
-        cardAttr3: 0,
-        cardRare: '',
-        cardDescription: '',
-      });
-      console.log('click');
+      this.salveButton();
     },
+  }
+
+  hasTrunfoValidation = () => {
+    const { salvaCards } = this.state;
+    const tryunfo = salvaCards.some((item) => item.trunfo === 'on');
+    return tryunfo && this.setState({ hasTrunfo: true });
+  }
+
+  salveButton = () => {
+    const {
+      salvaCards,
+      cardName,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardDescription,
+      cardTrunfo,
+    } = this.state;
+    const cards = {
+      nome: cardName,
+      descricao: cardDescription,
+      attr1: cardAttr1,
+      attr2: cardAttr2,
+      atts3: cardAttr3,
+      imagem: cardImage,
+      raridade: cardRare,
+      trunfo: cardTrunfo,
+    };
+    salvaCards.push(cards);
+    this.hasTrunfoValidation();
+    this.setState({
+      cardName: '',
+      cardImage: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardRare: '',
+      cardDescription: '',
+    });
+    console.log('click');
   }
 
   handleValidationInput = () => {
@@ -106,6 +119,7 @@ class App extends React.Component {
       cardAttr3,
       cardRare,
       cardTrunfo,
+      hasTrunfo,
       onInputChange,
       isSaveButtonDisabled,
       onSaveButtonClick,
@@ -126,6 +140,7 @@ class App extends React.Component {
             onInputChange={ onInputChange }
             isSaveButtonDisabled={ isSaveButtonDisabled() }
             onSaveButtonClick={ onSaveButtonClick }
+            hasTrunfo={ hasTrunfo }
           />
         </div>
         <Card
