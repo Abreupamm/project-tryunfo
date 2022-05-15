@@ -135,7 +135,7 @@ button:disabled {
   margin-left: 50px;
 }
 
-.container-visual .dv1 {
+.dv1 {
   background-color: #FFFFFF;
 margin-top: 50px;
   height: 68%;
@@ -145,7 +145,7 @@ border-radius: 10px;
 padding: 2%;
 }
 
-.container-visual .dv2 {
+.dv2 {
   background-color: #036B52;
   height: 100%;
 border: #003BE5 solid 3px;
@@ -153,7 +153,7 @@ border-radius: 10px;
 /* padding: 3px; */
 }
 
-.container-visual .dv2 .card-nome {
+.dv2 .card-nome {
   background-color: #023031;
   color: #FFFFFF;
   font-size: 20px;
@@ -165,17 +165,17 @@ border-radius: 10px;
   margin: 5% 5% 0% 5%;
 }
 
-.container-visual .dv2 .card-image {
+.dv2 .card-image {
   margin: 0% 5% 0% 5%;
   height: 40%;
 }
 
-.container-visual .dv2 .card-image img {
+.dv2 .card-image img {
   height: 100%;
   width: 100%;
 }
 
-.container-visual .dv2 .card-description {
+.dv2 .card-description {
   margin: 0% 5% 0% 5%;
   /* border: red solid 1px; */
   height: 12%;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import CardList from './components/CardList';
 
 class App extends React.Component {
   state = {
@@ -71,6 +72,7 @@ class App extends React.Component {
       cardAttr3: '0',
       cardRare: '',
       cardDescription: '',
+      click: true,
     });
     console.log('click');
   }
@@ -120,6 +122,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       hasTrunfo,
+      salvaCards,
       onInputChange,
       isSaveButtonDisabled,
       onSaveButtonClick,
@@ -143,6 +146,8 @@ class App extends React.Component {
             hasTrunfo={ hasTrunfo }
           />
         </div>
+        <div className="container-visual">
+          <h2>Pré-visualização</h2>
         <Card
           cardName={ cardName }
           cardImage={ cardImage }
@@ -153,6 +158,8 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           cardDescription={ cardDescription }
         />
+        </div>
+        <CardList salvaCards={salvaCards} />
       </div>
     );
   }
