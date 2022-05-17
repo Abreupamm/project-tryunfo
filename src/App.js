@@ -32,12 +32,38 @@ class App extends React.Component {
     onSaveButtonClick: () => {
       this.salveButton();
     },
-  }
+    onDeletButtonClick: (event) => {
+      const { name, trunfo } = event.target;
+      const { salvaCards } = this.state;
+      const filterCard = salvaCards.filter((card) => card.nome !== name);
+      let result = this.setState({ salvaCards: filterCard });
+      if (!trunfo) {
+        result = this.setState({
+          salvaCards: filterCard,
+          hasTrunfo: false,
+          cardTrunfo: false,
+        });
+      }
+      return result;
+    },
+  };
 
   hasTrunfoValidation = () => {
     const { salvaCards } = this.state;
     const tryunfo = salvaCards.some((item) => item.trunfo === 'on');
     return tryunfo && this.setState({ hasTrunfo: true });
+  }
+
+  updateState = () => {
+    this.setState({
+      cardName: '',
+      cardImage: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardRare: '',
+      cardDescription: '',
+    });
   }
 
   salveButton = () => {
@@ -64,17 +90,9 @@ class App extends React.Component {
     };
     salvaCards.push(cards);
     this.hasTrunfoValidation();
-    this.setState({
-      cardName: '',
-      cardImage: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
-      cardRare: '',
-      cardDescription: '',
-      cardTrunfo: undefined,
-    });
-    console.log('click');
+    this.updateState();
+    this.setState({ cardTrunfo: undefined });
+    // console.log('click');
   }
 
   handleValidationInput = () => {
@@ -126,6 +144,7 @@ class App extends React.Component {
       onInputChange,
       isSaveButtonDisabled,
       onSaveButtonClick,
+      onDeletButtonClick,
     } = this.state;
     return (
       <div>
@@ -161,7 +180,11 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <CardList salvaCards={ salvaCards } />
+        <CardList
+          salvaCards={ salvaCards }
+          onClick={ onDeletButtonClick }
+          hasTrunfo={ hasTrunfo }
+        />
       </div>
     );
   }

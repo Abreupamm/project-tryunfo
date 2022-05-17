@@ -99,6 +99,7 @@ class Form extends React.Component {
           onClick={ onSaveButtonClick }
           nome="Salvar"
           atr="save-button"
+          name="salvar"
         />
       </div>
     );
